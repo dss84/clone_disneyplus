@@ -10,9 +10,9 @@ const paths = {
 
 function styles() {
     return gulp.src(paths.scss)
-    .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError)) // Minifica o CSS durante a compilação
-    .pipe(cleanCss()) // Aplica uma minificação extra
-    .pipe(rename({ suffix: '.min' })) // Renomeia o arquivo para main.min.css
+    .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError)) 
+    .pipe(cleanCss()) 
+    .pipe(rename({ suffix: '.min' })) 
     .pipe(gulp.dest(paths.css));
 }
 
